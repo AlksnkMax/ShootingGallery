@@ -1,0 +1,38 @@
+/* FX FIX */
+.container, section {
+  min-width: $container-sm;
+}
+
+/* MEDIA */
+@mixin respond-to($media) {
+  @if $media == xs {
+    @media only screen and (max-width: $screen-sm-min - 1) { @content; }
+  }
+  @else if $media == sm {
+    @media only screen and (max-width: $screen-md-min - 1) { @content; }
+  }
+  @else if $media == md {
+    @media only screen and (max-width: $screen-lg-min - 1) { @content; }
+  }
+  @else if $media == pmd {
+    @media only screen and (min-width: $screen-md-min) { @content; }
+  }
+  @else if $media == lg {
+    @media only screen and (min-width: $screen-lg-min) { @content; }
+  }
+  @else if $media == xxs {
+    @media (max-width: 380px) { @content; }
+  }
+  @else if $media == xxm {
+    @media (max-width: 520px) { @content; }
+  }
+}
+
+
+
+/* COLORS */
+
+$clBgGrey: #ededed;
+$clTextBrown: #403219;
+$clTextRed: #ff0000;
+$clTextGrey: #2c2c2c;
